@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Challenge Alura</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="assets/logo_alura.png" alt="logo da alura">
+        </header>
+        <section class="main">
+            <section class="encrypt">
+                <textarea cols="100%" rows="60" name="" id="txt-area1" placeholder="Digite seu texto" class="line">
+                </textarea>
+                <section class="info">
+                    <img src="assets/vector.png" alt="ponto de exclamação" width="12px">
+                    <p class="paragrafo">Apenas letras minúsculas e sem acento.</p>
+                </section>
+                <section class="buttons">
+                    <button onclick="encrypt()" class="btn-1">Criptografar</button>
+                    <button onclick="decrypt()" class="btn-2">Descriptografar</button>
+                </section>
+            </section>
+        </section>
+        <section id="decrypt">
+            <img class="icone" id="icone" src="assets/procurando_com_lupa.png" alt="imagem procurando com lupa">
+            <h2 id="none"></h2>
+            <textarea cols="10" readonly name="" id="txt-area2" placeholder="Digite um texto que você deseja criptografar ou descriptografar"></textarea>
+            <h3 id="msg"></h3>
+            <section id="copy"></section>
+        </section>
+        <footer>
+            <p>Criado por Wyll Brayner</p>
+            <a href="https://www.github.com/wyllbrayner" target="_blank">
+                <img class="github" src="assets/logo_github.png">
+            </a>
+        </footer>
+    </body>
+    <script src="script.js"></script>
+</html>
