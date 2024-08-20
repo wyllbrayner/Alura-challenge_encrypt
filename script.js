@@ -13,33 +13,21 @@ function startFields() {
 
 startFields();
 
-function encodeText (text, seq) {
-    var text1;
-
+function encodeText (text) {
     text = text.replace(/e/igm, "enter");
     text = text.replace(/i/igm, "imes");
     text = text.replace(/a/igm, "ai");
     text = text.replace(/o/igm, "ober");
     text = text.replace(/u/igm, "ufat");
-    if (seq != 10) {
-        text1 = encodeText(text, ++seq);
-        return (text1);
-    }
     return (text);
 }
 
-function decodeText(text, seq) {
-    var text1;
-
+function decodeText(text) {
     text = text.replace(/enter/igm, 'e');
     text = text.replace(/imes/igm, 'i');
     text = text.replace(/ai/igm, 'a');
     text = text.replace(/ober/igm, 'o');
     text = text.replace(/ufat/igm, 'u');
-    if (seq != 10) {
-        text1 = decodeText(text, ++seq);
-        return (text1);
-    }
     return (text);
 }
 
@@ -61,7 +49,7 @@ function encrypt() {
     } else {
         var textEncypted;
 
-        textEncypted = encodeText(textValue.value, 0);
+        textEncypted = encodeText(textValue.value);
         actualizeTxtArea2(textEncypted);
     }
 }
@@ -77,7 +65,7 @@ function decrypt() {
     } else {
         var textDecrypted;
 
-        textDecrypted = decodeText(textValue.value, 0);
+        textDecrypted = decodeText(textValue.value);
         actualizeTxtArea2(textDecrypted);
     }
 }
