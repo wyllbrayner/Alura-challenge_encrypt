@@ -22,7 +22,6 @@ function encodeText (text, seq) {
     text = text.replace(/o/igm, "ober");
     text = text.replace(/u/igm, "ufat");
     if (seq != 10) {
-        console.log(seq);
         text1 = encodeText(text, ++seq);
         return (text1);
     }
@@ -38,7 +37,6 @@ function decodeText(text, seq) {
     text = text.replace(/ober/igm, 'o');
     text = text.replace(/ufat/igm, 'u');
     if (seq != 10) {
-        console.log(seq);
         text1 = decodeText(text, ++seq);
         return (text1);
     }
